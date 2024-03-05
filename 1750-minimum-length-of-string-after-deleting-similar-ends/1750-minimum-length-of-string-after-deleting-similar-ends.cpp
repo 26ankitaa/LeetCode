@@ -5,18 +5,20 @@ public:
         int left = 0;
         int right = s.length() - 1;
         
-        while(left < right && s[left] == s[right]) 
+        while(left<right && s[left]==s[right])
         {
-            char current = s[left]; 
-            while(left <= right && s[left] == current) 
+            char ch = s[left];
+            
+            while(left<right && ch == s[left])
             {
                 left++;
             }
-            while (right >= left && s[right] == current) 
+            
+            while(left<=right && ch==s[right])
             {
                 right--;
             }
         }
-        return max(0, right - left + 1);
+        return right-left+1;
     }
 };

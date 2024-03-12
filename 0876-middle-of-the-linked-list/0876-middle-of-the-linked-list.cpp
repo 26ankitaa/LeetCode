@@ -26,12 +26,11 @@ public:
     ListNode* middleNode(ListNode* head) {
         int n = getLength(head);
         int position = n/2 + 1;
-        int currPos = 1;
         ListNode* temp = head;
         
-        while(currPos != position)
+        while(position != 1)
         {
-            currPos++;
+            position--;
             temp = temp->next;
         }
         return temp;
